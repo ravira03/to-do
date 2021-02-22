@@ -1,71 +1,54 @@
-# Getting Started with Create React App
+# react-to-do-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-### Making a Progressive Web App
+React Redux application for managing our daily to-do-list.
 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+A complete Single-Page-Application (SPA) created using React JavaScript library. We have used Redux for state management and Bootstrap for styling the UI. We are interacting with a RESTful API which is protected using JWT.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Another thing to note is, we have not used any 3rd party library such as thunk/saga for performing async operations. Instead we have created own custom API redux middleware. For any medium to large application, leveraging redux middleware helps in centralizing common tasks (or cross cutting concerns) such as API calls, exception handling and logging.
 
-### Deployment
+And  We have used MongoDB as the database and mongoose as the ORM library which makes it easier to interact with MongoDB.
+Apart from this, we have used JSON Web Token (JWT) to add authentication. Using JWT, we can protect certain endpoints and ensure that user must be logged-in to access those.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Setup and Installation
 
-### `npm run build` fails to minify
+1. **Clone the React app repo from GitHub**
+   ```sh
+   git clone https://github.com/ravira03/to-do.git
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# ecommerce" 
+2. **Install npm dependencies**
+   ```sh
+   cd react-personal-notes-mgr
+   npm install
+   ```
+
+
+3. **Setup MongoDB**
+
+   There are lots of options available to have a running MongoDB instance:
+   - a typical way is to download the community edition from [here](https://www.mongodb.com/download-center/community) and install locally on the machine
+   - another option is to spin-up an instance on the cloud. Here are step-by-step instruction for that - [Get Started with Atlas](https://docs.atlas.mongodb.com/getting-started)
+   - another option is by running a mongodb docker container. If docker is installed, its simply a matter of running single command to spin-up a database instance:
+     ```sh
+     docker container run --name mongodb -d -p 27017:27017 mongo
+     ```
+
+
+
+4. **Run npm start to start the application**
+   ```sh
+   npm start
+   ```
+   this runs the application at port 3000 and we can access from http://localhost:3000
+
+   And open another terminal and change the directory to 
+   ``` 
+    cd to-do-api 
+   ```
+   And run npm start. this runs at port 3300 and hence all enpoints can be accessed starting from http://localhost:3300
+
+
+
+
