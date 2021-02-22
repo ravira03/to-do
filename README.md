@@ -20,7 +20,7 @@ Apart from this, we have used JSON Web Token (JWT) to add authentication. Using 
 
 2. **Install npm dependencies**
    ```sh
-   cd react-personal-notes-mgr
+   cd to-do
    npm install
    ```
 
